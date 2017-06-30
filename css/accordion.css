@@ -1,0 +1,592 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*---------------general------------------*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+body {
+	line-height:1;
+	font-family: 'Roboto', sans-serif;
+	background-color:#faf9f9;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	list-style:none;
+}
+blockquote, q {
+	quotes:none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content:'';
+	content:none;
+}
+a {
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+/* change colours to suit your needs */
+ins {
+	background-color:#ff9;
+	color:#000;
+	text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+	background-color:#ff9;
+	color:#000;
+	font-style:italic;
+	font-weight:bold;
+}
+del {
+	text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+	border-bottom:1px dotted;
+	cursor:help;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+	display:block;
+	height:1px;
+	border:0;
+	border-top:1px solid #cccccc;
+	margin:1em 0;
+	padding:0;
+}
+input, select {
+	vertical-align:middle;
+}
+/*---------------general /-------------------*/
+/*---------------custom css------------------*/
+.mainBody {
+	padding:10px 20px;
+	background:#fff;
+}
+.nav-tabs {
+	border-bottom: 2px solid #005ea5;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+	background-color: #005ea5;
+	border-color:#005ea5;
+}
+.nav-tabs > li > a {
+	border: 1px solid #cfcfcf;
+	color: #005ea5;
+	background: #ffffff;
+	border-radius:0;
+	margin-right: 10px;
+	line-height: 17px;
+	border-bottom: 1px solid transparent;
+}
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+	color: #fff !important;
+	background: #005ea5;
+	border-color:#005ea5;
+	transition: all 0.4s ease 0s;
+}
+.tab-pane .content {
+	padding: 15px;
+	display: block;
+	font-size: 14px;
+	line-height: 20px;
+}
+.tab-content {
+	padding:0;
+	background: #FFF;
+	border: 1px solid #cfcfcf;
+}
+.nav-tabs > li {
+	width:14%;
+	text-align:center;
+	margin-bottom: 0;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+	text-decoration: none;
+	background-color: #005ea5;
+	color:#fff;
+}
+.insideTab {
+	padding:15px 0;
+}
+.insideTab .nav-tabs > li {
+	width: 24%;
+}
+.insideTab .nav-tabs > li > a {
+	font-size:14px;
+	padding: 5px 0;
+	margin-right:0;
+}
+.insideTab .tab-content>.tab-pane {
+	padding:20px 0px 0px 0px;
+	font-size:14px;
+	line-height:20px;
+}
+.insideTab .tab-content {
+	border:none;
+}
+.insideTab .nav-tabs {
+	border-bottom: 1px solid #005ea5;
+}
+.Tregistrer_box {
+	padding-top:30px;
+}
+.page-header {
+	margin: 0 0 10px;
+	border-bottom:1px solid #979797;
+}
+.page-header h2 {
+	font-size:20px;
+	color:#005ea5;
+}
+.lft_panel .form-control {
+	border-radius:0;
+	box-shadow:none;
+	border:1px solid #7b7b7b;
+	margin-top:15px;
+	height:268px;
+}
+.Tregistrer_box a {
+	font-size:12px;
+	text-decoration:underline;
+	margin-top:27px;
+}
+.Tregistrer_box .btn-primary {
+	background-color:rgba(0, 94, 168, 1);
+	margin-top:15px;
+	border-radius:0;
+	width:96px;
+	transition: all 0.4s ease 0s;
+}
+.Tregistrer_box .btn-primary:hover {
+	background-color:rgba(0, 94, 168, 0.7);
+}
+table.dataTable thead .sorting:after {
+	content: "\f0dc";
+	font-family: fontawesome;
+	color: rgba(81, 81, 81, 1);
+	margin-left:10px;
+}
+table.dataTable thead .sorting_asc:after {
+	content: "\f0de";
+	font-family: fontawesome;
+	margin-left:10px;
+}
+table.dataTable thead .sorting_desc:after {
+	content: "\f0dd";
+	font-family: fontawesome;
+	margin-left:10px;
+}
+.search_box {
+	padding:20px 0 10px 0;
+}
+.input-mini {
+	width:40%;
+	padding:5px;
+	webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+ -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+ -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+ transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	border:1px solid #7b7b7b;
+}
+.input-mini:focus {
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+ background-color: #f3f3f3;
+}
+.table_wrap {
+	border:1px solid #cfcfcf;
+}
+.table {
+	margin-bottom:0;
+}
+.pagination ul li {
+	list-style:none;
+	float:left;
+	margin-right:10px;
+}
+.buton {
+	background:#fff;
+	width:32px;
+	height:32px;
+	border:1px solid #7b7b7b;
+	font-size: 16px;
+	transition: all 0.4s ease 0s;
+	display:block;
+	padding:0
+}
+.buton span {
+	display:block;
+}
+.buton:hover, .buton:focus {
+	background:#005ea5;
+	border:1px solid #005ea5;
+}
+.buton:hover span, .buton:focus span {
+	color:#fff;
+}
+.buton.arrowBtn:hover, .buton.arrowBtn:focus {
+	color:#fff;
+}
+.buton.disabled {
+	background:#faf9f9;
+	color:#cfcfcf;
+	border:1px solid #cfcfcf;
+	cursor: not-allowed;
+}
+.buton.disabled:hover, .buton.disabled:focus {
+	background:#faf9f9;
+	border:1px solid #cfcfcf;
+	color:#cfcfcf;
+}
+.buton.disabled:hover span, .buton.disabled:focus span {
+	color:#cfcfcf;
+}
+.arrowBtn {
+	color:#005ea5;
+	font-weight:bold;
+	font-size: 20px;
+	border:1px solid #cfcfcf;
+}
+.txt_area {
+	line-height:29px;
+}
+.table .verify li {
+	list-style:none;
+	display:inline-block;
+	font-size:13px;
+	color:#005ea5;
+	margin-right: 10px;
+}
+.table .verify li>span {
+	color:#005ea5;
+	padding: 0 5px;
+	font-size: 15px;
+}
+.panel-heading .accordion-toggle:after {
+	/* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+	content: "\e252";    /* adjust as needed, taken from bootstrap.css */
+	float: left;       /* adjust as needed */
+	margin-right:10px;
+	margin-top: 3px;
+	font-size: 12px;
+}
+.panel-heading .accordion-toggle.collapsed:after {
+	/* symbol for "collapsed" panels */
+    content: "\e250";    /* adjust as needed, taken from bootstrap.css */
+}
+.panel-heading {
+	border-radius:0;
+}
+.panel-group .panel {
+	border-radius:0;
+}
+.panel-heading:hover a {
+	color:#fff;
+}
+.panel-default>.panel-heading {
+	background:#fff;
+}
+.panel-default>.panel-heading:hover {
+	background-color:#005ea5;
+	transition: all 0.4s ease 0s;
+	cursor:pointer;
+}
+.panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body {
+	border-top:none;
+}
+.panel-heading .accordion-toggle {
+	font-size:14px;
+	text-decoration:none;
+	color:#005ea5;
+}
+.panel-body {
+	font-size:14px;
+	padding:0;
+}
+.accordian .table_wrap {
+	border:none;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	font-size:13px;
+}
+.expired {
+	color:#F00;
+}
+.control-label {
+	font-size:14px;
+}
+.lft_panel {
+	width:33.3% !important;
+}
+.tab-content .modal .modal-dialog {
+	width:750px;
+}
+.tab-content .modal .modal-header {
+	border-bottom:none;
+}
+.text_content {
+	position:relative;
+	padding: 0 0 0 30px;
+}
+.tab-content .modal .modal-body {
+	padding: 15px 30px;
+}
+.text_content a {
+	color:#005ea5;
+	font-weight:bold;
+	text-decoration:underline;
+}
+.Mheading {
+	color:#005ea5;
+	font-weight:bold;
+	text-decoration:underline;
+	font-size:16px;
+	padding-bottom:10px;
+	display:block;
+}
+.Mtop_wrap {
+	padding:25px 0;
+	position:relative;
+}
+.bottom_gap {
+	padding-bottom:20px;
+}
+.name_oganization {
+	display: block;
+	margin-right: 40px;
+	float: left;
+	margin-bottom:20px;
+}
+.modal-footer .btn-default {
+	width:76px;
+	border-radius:0;
+	border: 1px solid #1f71af;
+	color: #1f71af;
+}
+.line {
+	position: absolute;
+	left: 0px;
+	width: 1px;
+	height: 100%;
+	background: #d4d4d4;
+	top: 0;
+	padding:20px 0;
+}
+.fontSize {
+	font-size:14px;
+}
+.btn-primary {
+	color: #fff;
+	background-color: #005ea5;
+	border-color: #2e6da4;
+	border-radius: 0;
+	transition: all 0.4s ease 0s;
+}
+.btn-primary:hover {
+	background-color: rgba(0, 94, 168, 0.7);
+}
+.glyphicon-plus-sign {
+	padding-right:5px;
+}
+.top_gap {
+	margin-top:20px;
+}
+.adminTopbar {
+	border-bottom:1px solid #b7b7b7;
+}
+.grey_color {
+	color:#3f3f3f !important;
+}
+#admin .modal-header {
+	background-color:#005ea5;
+	color:#fff;
+}
+#admin .modal-title {
+	font-size:16px;
+}
+#admin .modal-content {
+	border-radius:4px;
+}
+#admin button.close {
+	color:#fff;
+	opacity: 1;
+}
+#admin .modal-dialog {
+	width:410px;
+}
+#admin .modal-body, #admin .modal-footer {
+	background:#faf9f9;
+}
+#admin .modal-footer {
+	border-top:none;
+	padding: 15px 22px 15px 15px;
+}
+#admin .modal .input-mini {
+	width:100%;
+}
+#admin .search_box .control-label {
+	font-size:13px;
+}
+.inputbox_wrap {
+	margin-bottom:14px;
+}
+#admin .btn-group {
+	width:100%;
+}
+#admin .adminForm .btn {
+	width:81%;
+	border-radius:0;
+	border: 1px solid #7b7b7b;
+	text-align: left;
+}
+#admin .btn-group.adminForm>.btn+.dropdown-toggle {
+	padding-right: 8px;
+	padding-left: 8px;
+	width:19%;
+	text-align: center;
+}
+.cross {
+	color:#cc3540;
+	right:32px;
+	position:absolute;
+	cursor:pointer;
+	top:4px;
+}
+.fa-plus {
+	color: #005ea5;
+	cursor: pointer;
+	position:absolute;
+	right: 14px;
+	top: 52px;
+}
+#admin .modal .modal-body {
+	padding: 15px 7px;
+}
+#admin .modal-body p {
+	margin-left:14px;
+}
+#admin .modal-footer .btn-default:hover {
+	background:#1f71af;
+	color:#fff;
+	transition: all 0.4s ease 0s;
+}
+.update_history .control-label {
+	font-size:13px;
+}
+.update_history span {
+	font-size:13px;
+}
+.delete {
+	background:rgba(204, 51, 63, 1) !important;
+	color:#fff !important;
+	border:1px solid #cc333f !important;
+}
+.delete:hover {
+	background:rgba(204, 51, 63, 0.8);
+	color:#fff !important;
+	opacity:0.9;
+}
+.edit {
+	background:#005ea5;
+	color:#fff !important;
+}
+.edit:hover {
+	background:#005ea5;
+	color:#fff !important;
+}
+.update_history {
+	border-top: 1px solid #afafaf;
+	border-bottom: 1px solid #afafaf;
+	padding-top: 10px;
+}
+
+
+/*new css  for accordian*/
+.ngHeaderScroller{background: #fff;}
+.ngTopPanel{background-color: transparent; border-bottom: none; border: none; font-size: 14px;}
+.table{position: relative;     margin-top: 60px; border: none; height: inherit !important; }
+.ngPagerControl{position: absolute;    right: 14px;    top: -218px; z-index: 10;    float: none;  }
+.ngFooterPanel{border-top: none; background-color: transparent; height: inherit !important;}
+.ngTotalSelectContainer{display: none;}
+.ngHeaderCell{border: none;}
+.ngCell{border-top:1px solid #ddd; border-right: none; border-left: none;}
+.ngHeaderText{padding: 8px;}
+.ngCellText{padding: 8px; font-size: 14px;}
+.grid-action-cell{padding: 8px; font-size: 14px;}
+.fa-check-circle  {color: #005ea5;    padding: 0 5px;    font-size: 15px !important;}
+.fa-times-circle{ color: #005ea5;    padding: 0 5px 0 20px;    font-size: 15px !important;}
+.grid-action-cell a{font-size: 13px;}
+.ngViewport{height:inherit !important;}
+.ngSortButtonDown{left: 80px; right:inherit;}
+.ngSortButtonUp{left: 80px; right:inherit;}
+.ngGrid input{width: 50px !important;    height: 30px !important; margin-top: 0 !important;}
+.ngPagerButton {    height: 30px;    width: 30px; color: #005ea5;
+    font-weight: bold;
+    font-size: 20px;
+     border: 1px solid #cfcfcf; background: #fff; }
+
+
+.ngPagerFirstTriangle {    
+    border-style:inherit;
+    border-width:inherit;
+    border-color:transparent;
+    margin-left: -5px
+}
+.ngPagerLastTriangle {
+    width: 0;
+    height: 0;
+     border-style:inherit;
+    border-width:inherit;
+    border-color:transparent;
+    margin-left: -1px
+}
+.ngPagerFirstBar,.ngPagerLastBar{
+    display: none;
+}
+
+
+
+
+/*-------------------media quiry start---------------*/
+@media screen and (max-width:800px) {
+.nav-tabs > li {
+width:18%;
+}
+.insideTab .nav-tabs > li {
+width:30%;
+}
+.lft_panel {
+width:100% !important;
+}
+.table-responsive>.table>thead>tr>th, .table-responsive>.table>tbody>tr>th, .table-responsive>.table>tfoot>tr>th, .table-responsive>.table>thead>tr>td, .table-responsive>.table>tbody>tr>td, .table-responsive>.table>tfoot>tr>td {
+ white-space: nowrap;
+}
+.line{display:none}
+}
+
+/*-------------------media quiry end---------------*/
+
+
+/*---------------custom css /------------------*/
