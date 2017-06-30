@@ -1,0 +1,10 @@
+<div>
+  <fieldset class="search_box">
+    <label class="control-label"><strong>Search for teachers :</strong></label>
+    <input class="peopleNameFilter input-mini" id="personNameFilter" type="text" ng-model="nameFilter" placeholder="Enter name, school or email address"
+      ng-change="filterName()">
+  </fieldset>
+  <div class="table_wrap">
+    <div class="gridStyle table" ng-grid="gridOptions"></div>
+  </div>
+</div>

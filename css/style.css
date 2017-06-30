@@ -1,0 +1,12 @@
+.gridStyle {
+    width: 100%; 
+    height: 300px;
+    min-height: 180px;
+}
+.ngRowCountPicker{
+    display: none;
+}
+a.accordion-toggle,.clickable-span{
+    display: block;
+}
+
