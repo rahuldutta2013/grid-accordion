@@ -216,6 +216,7 @@ table.dataTable thead .sorting_desc:after {
 }
 .table_wrap {
 	border:1px solid #cfcfcf;
+	padding-left: 2%;
 }
 .table {
 	margin-bottom:0;
@@ -538,7 +539,7 @@ table.dataTable thead .sorting_desc:after {
 .fa-check-circle  {color: #005ea5;    padding: 0 5px;    font-size: 15px !important;}
 .fa-times-circle{ color: #005ea5;    padding: 0 5px 0 20px;    font-size: 15px !important;}
 .grid-action-cell a{font-size: 13px;}
-.ngViewport{height:inherit !important;}
+.ngViewport{height:inherit !important;min-height: 160px;}
 .ngSortButtonDown{left: 80px; right:inherit;}
 .ngSortButtonUp{left: 80px; right:inherit;}
 .ngGrid input{width: 50px !important;    height: 30px !important; margin-top: 0 !important;}
@@ -576,9 +577,8 @@ table.dataTable thead .sorting_desc:after {
 }
 a.accordion-toggle,.clickable-span{
     display: block;
+	margin: 1%;
 }
-
-
 
 
 /*-------------------media quiry start---------------*/

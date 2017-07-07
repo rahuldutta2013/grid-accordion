@@ -8,11 +8,12 @@ app.directive('custAccordion', function ($timeout) {
                 $(window).resize();
                 $(window).resize();
             };
-            scope.populateData = function (event, url) {
+            scope.populateData = function (event,index, url) {
                 if (angular.element(event.target).parents('.panel').find('.in').length <= 0) {
                     redrawGrid();
-                    scope.$broadcast('getData', url);
+                    scope.$broadcast('getData', url, index);
                 }
+                console.log(index);
             }
             scope.accordionHeaders = scope.accordionOptions;
         }

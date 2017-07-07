@@ -12,6 +12,12 @@ app.directive(
                 scope.denyRow = function (row) {
                     //todo
                 }
+                scope.cancelInvite = function (row) {
+                    //todo
+                }
+                scope.resendInvite = function (row) {
+                    //todo
+                }
                 $timeout(function () {
                     element.find('[title="Next Page"]').children().addClass('fa fa-angle-right');
                     element.find('[title="Previous Page"]').children().addClass('fa fa-angle-left');
@@ -62,12 +68,26 @@ app.directive(
                     columnDefs: 'custColDef'
                 };
 
-                var createColoumnDef = function (data) {
+                var createColoumnDef = function (data, accordionIndex) {
+                    var cellTemplate;
+                    switch (accordionIndex) {
+                        case 0:
+                            cellTemplate = '<div class="grid-action-cell"> ' + '<span class="fa fa-check-circle"></span>' +
+                                '<a class="margin-right" ng-click="approveRow(row.entity);" >Approve</a>' + '<span class=" fa fa-times-circle"></span>' + '<a ng-click="denyRow(row.entity);" >Deny</a></div>';
+                            break;
+                        case 1:
+                            cellTemplate = '<div class="grid-action-cell"> ' + '<span class="fa fa-check-circle"></span>' +
+                                '<a class="margin-right" ng-click="cancelInvite(row.entity);" >Cancel Invite</a>' + '<span class=" fa fa-times-circle"></span>' + '<a ng-click="resendInvite(row.entity);" >Resend Invite</a></div>';
+                            break;
+                        case 2:
+                            break;
+                        default:
+                            cellTemplate = '<div class="grid-action-cell"> ' + '<span class="fa fa-check-circle"></span>' +
+                                '<a class="margin-right" ng-click="approveRow(row.entity);" >Cancel Invite</a>' + '<span class=" fa fa-times-circle"></span>' + '<a ng-click="denyRow(row.entity);" >Resend Invite</a></div>';
+                    }
                     var coloumnDef = [],
                         arrayOfKey = Object.keys(data),
-                        cellTemplate = '<div class="grid-action-cell"> ' + '<span class="fa fa-check-circle"></span>' +
-                            '<a class="margin-right" ng-click="approveRow(row.entity);" >Approve</a>' + '<span class=" fa fa-times-circle"></span>' + '<a ng-click="denyRow(row.entity);" >Deny</a></div>';
-                    verifyObj = {};
+                        verifyObj = {};
                     verifyObj.displayName = 'Verify';
                     verifyObj.cellTemplate = cellTemplate;
                     for (var i = 0; i < arrayOfKey.length; i++) {
@@ -116,11 +136,11 @@ app.directive(
                     }, 100);
                 };
 
-                $scope.$on('getData', function (event, url) {
+                $scope.$on('getData', function (event, url, accordionIndex) {
                     dataService.getInformation(url).then(function (resp) {
                         $scope.totalGridData = resp.data;
                         $scope.setPagingData(resp.data, $scope.pagingOptions.currentPage, $scope.pagingOptions.pageSize, );
-                        $scope.custColDef = createColoumnDef(resp.data[0]);
+                        $scope.custColDef = createColoumnDef(resp.data[0], accordionIndex);
                         $scope.dataUrl = url;
                     });
 

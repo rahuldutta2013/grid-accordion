@@ -3,7 +3,7 @@
         <div class="panel panel-default" ng-repeat="accordionHeader in accordionHeaders">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <span ng-click="populateData($event,accordionHeader.val)" class="clickable-span">
+                    <span ng-click="populateData($event,$index,accordionHeader.val)" class="clickable-span">
                          <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index+1}}" aria-expanded="false">
                         {{accordionHeader.title}}</a>
                         </span>
