@@ -4,7 +4,7 @@ app.directive(
         return {
             templateUrl: 'template/grid.html',
             restrict: 'E',
-            scope: true,
+            scope: false,
             link: function (scope, element, attrs) {
                 scope.approveRow = function (row) {
                     //todo
@@ -13,7 +13,7 @@ app.directive(
                     //todo
                 }
                 scope.cancelInvite = function (row) {
-                    //todo
+                    console.log('hello cancel');
                 }
                 scope.resendInvite = function (row) {
                     //todo
@@ -77,7 +77,7 @@ app.directive(
                             break;
                         case 1:
                             cellTemplate = '<div class="grid-action-cell"> ' + '<span class="fa fa-check-circle"></span>' +
-                                '<a class="margin-right" ng-click="cancelInvite(row.entity);" >Cancel Invite</a>' + '<span class=" fa fa-times-circle"></span>' + '<a ng-click="resendInvite(row.entity);" >Resend Invite</a></div>';
+                                '<a class="margin-right" ng-click="cancelInvite();" >Cancel Invite</a>' + '<span class=" fa fa-times-circle"></span>' + '<a ng-click="resendInvite(row.entity);" >Resend Invite</a></div>';
                             break;
                         case 2:
                             break;
@@ -143,7 +143,6 @@ app.directive(
                         $scope.custColDef = createColoumnDef(resp.data[0], accordionIndex);
                         $scope.dataUrl = url;
                     });
-
                 })
 
                 $scope.$broadcast('getData', $scope.defaultUrl);

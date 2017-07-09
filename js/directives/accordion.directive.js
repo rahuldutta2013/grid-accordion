@@ -2,7 +2,7 @@ app.directive('custAccordion', function ($timeout) {
     return {
         templateUrl: 'template/accordionTemplate.html',
         restrict: 'E',
-        scope: true,
+        scope: false,
         link: function (scope, elem, attrs) {
             var redrawGrid = function () {
                 $(window).resize();
