@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default" ng-repeat="accordionHeader in accordionHeaders">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <span ng-click="populateData($event,$index,accordionHeader.val)" class="clickable-span">
+                         <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index+1+accordionHeader.title}}" aria-expanded="false">
+                        {{accordionHeader.title}}</a>
+                        </span>
+                </h4>
+            </div>
+            <div id="collapse{{$index+1+accordionHeader.title}}" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <my-grid></my-grid>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
